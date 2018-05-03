@@ -30,15 +30,15 @@
       "grunt": "*",
       "grunt-contrib-jshint": "*",
       "grunt-contrib-uglify-es": "*",
-      "grunt-coveralls": "^2.0.0",
+      "grunt-coveralls": "~2.0.0",
       "grunt-karma": "*",
       "grunt-npm-command": "*",
-      "karma": "^2.0.2",
+      "karma": "~2.0.2",
       "karma-chrome-launcher": "*",
       "karma-coverage": "*",
       "karma-html2js-preprocessor": "*",
       "karma-mocha": "*",
-      "mocha": "^5.1.1",
+      "mocha": "~5.1.1",
       "uglify-es": "github:mishoo/UglifyJS2#harmony"
    }
 }
