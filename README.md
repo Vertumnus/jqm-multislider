@@ -105,8 +105,9 @@ With this method you have the possibility to add a slider to the multislider.
 $('#multislider').multislider('increase')
 ```
 
-Attention: The multislider widget initializes the values of the sliders using this method.
-It will distribute them even on the slider bar.
+__Attention:__
+> The multislider widget initializes the values of the sliders using this method.
+> It will distribute them even on the slider bar.
 
 #### decrease
 With this method you have the possibility to remove a slider from the multislider.
@@ -116,8 +117,9 @@ It removes always the last slider.
 $('#multislider').multislider('decrease')
 ```
 
-Attention: The multislider widget initializes the values of the sliders using this method.
-It will distribute them even on the slider bar.
+__Attention:__
+> The multislider widget initializes the values of the sliders using this method.
+> It will distribute them even on the slider bar.
 
 ## Behavior
 You cannot move a slider over its neighbor slider. There is always a difference of one step.
