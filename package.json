@@ -1,7 +1,7 @@
 {
    "name": "jqm-multislider",
    "description": "A simple multislider widget for jQuery Mobile",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "keywords": [
       "jQuery",
       "mobile",

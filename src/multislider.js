@@ -59,6 +59,8 @@ $.widget('vertumnus.multislider', {
       
       if(my.options.showValue)
          my._sliderContainer.find(`a[pos=${currentIndex}]`).html(current.val())
+      
+      my._trigger('change', event)
    },
    _newSlider: function(elem, index){
       let slider = elem.attr({ 
@@ -100,13 +102,25 @@ $.widget('vertumnus.multislider', {
       this._sliders[index].slider.val(value).change()
       return this
    },
-   count: function(){
-      return this._sliders.length
+   count: function(number){
+      if(number === undefined)
+         return this._sliders.length
+      let i = this._sliders.length
+      if(number < this._sliders.length){
+         for(; i > number; --i)
+            this.decrease()
+      }
+      else{
+         for(; i < number; ++i)
+            this.increase()
+      }
+      return this
    },
    increase: function(){
       this._newSlider($('<input type="range" />').appendTo(this.element), this._sliders.length)
               .change({ widget:this }, this._change).parent().hide()
       this._initSliders()
+      this._trigger('change')
    },
    decrease: function(){
       this._sliders.pop()
@@ -114,5 +128,6 @@ $.widget('vertumnus.multislider', {
       let input = this.element.find('input:last')
       input.slider('destroy').remove()
       this._initSliders()
+      this._trigger('change')
    }
 })
